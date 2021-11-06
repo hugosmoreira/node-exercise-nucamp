@@ -8,7 +8,7 @@ partnerRouter.route('/')
     next();
   })
   .get((req, res) => {
-    res.end('Will send all the PARTNERS to you');
+    res.end(`Will send all the PARTNERS to you ${req.params.partnerId}`);
   })
   .post((req, res) => {
     res.end(`Will add the partner: ${req.body.name} with description: ${req.body.description}`);

@@ -8,7 +8,7 @@ promotionRouter.route('/')
     next();
   })
   .get((req, res) => {
-    res.end('Will send all the PROMOTIONS to you');
+    res.end(`Will send all the PROMOTIONS to you ${req.params.promotionId} `);
   })
   .post((req, res) => {
     res.end(`Will add the promotion: ${req.body.name} with description: ${req.body.description}`);
